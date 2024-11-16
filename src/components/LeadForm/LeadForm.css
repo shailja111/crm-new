@@ -1,0 +1,149 @@
+.lead-form-container{
+    /* background: #f2f4f7; */
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.form-heading {
+    margin-bottom: 20px;
+    margin-left: 9%;
+    opacity: 0.9;
+    margin-top: 15px;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.14;
+  }
+.lead-form{
+    background: #fff;
+    padding: 31px;
+    border-radius: 5px;
+    margin-top: 20px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 82%;
+    margin-left: 9%;
+}
+
+.lead-form-company{
+    background: #fff;
+    padding: 31px;
+    border-radius: 5px;
+    margin-top: 1px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 82%;
+    margin-left: 9%;
+    
+}
+.comp {
+  font-size: 1.5rem !important;
+  margin-left: 10px;
+  font-weight: 500;
+  margin-bottom: .5em;
+  line-height: 1.2;
+}
+.lead-form-buttons{
+  background: #fff;
+    padding: 31px;
+    border-radius: 5px;
+    margin-top: -13px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 82%;
+    margin-left: 9%;
+}
+
+.section-header {
+    margin-bottom: 20px;
+  }
+
+  .section-header-company{
+    margin-bottom: 20px;
+    display: flex;
+  }
+
+  .section-header-company a{
+    background: white;
+    border: none;
+  }
+  .section-header-company a:active{
+    background: none;
+    border:none;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #company-toggle button{
+    background-color: #ffff !important;
+    border: nonne !important;
+    
+  }
+
+  svg {
+    font-size: 27px;
+    margin-top: 6px;
+}
+
+  button.accordion-button.collapsed {
+    margin-left: 9%;
+    height: 8vh;
+    width: 82%;
+    margin-right: 30%;
+    border: none !important;
+    margin-top: 1px;
+    display: flex;
+    justify-content: flex-start;
+    animation: none !important;
+}
+button.accordion-button{
+  margin-left: 9%;
+  height: 8vh;
+  width: 82%;
+  margin-right: 30%;
+  border: none !important;
+  margin-top: 1px;
+  display: flex;
+  justify-content: flex-start;
+  animation: none !important;
+}
+
+.lead-form-buttons button{
+  background: white;
+  color: black;
+  padding: 9px;
+  width: auto;
+  border-radius: 5px !important;
+}
+  
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+    }
+    .btnClose {
+      position: absolute;
+      top: 9%;
+      left: -16%;}
+
+      .lead-form{
+        width: 100%;
+        margin-left: 12px;
+      }
+
+      .lead-form-buttons {
+        background: #fff;
+        
+        width: 100%;
+        margin-left: 3%;
+    
+  }
+}

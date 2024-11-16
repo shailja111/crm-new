@@ -1,0 +1,17 @@
+.employees{
+    margin-top: 72px;
+    height: 50px;
+    background: #ffff;
+    display: flex;
+}
+
+
+  .outline{
+    border-right: 1px solid #e8eef3;
+    padding-left: 3px;
+  }
+  .icon-employee-search{
+    border: none;
+    background-color: #f2f4f7;
+    padding: 7px;
+  }

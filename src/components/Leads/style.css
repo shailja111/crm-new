@@ -1,76 +1,373 @@
 .card.mb-3 {
-    margin-bottom: 30px !important;
+  margin-bottom: 30px !important;
 }
 .widget-content {
-    padding: 1rem;
-    flex-direction: row;
-    align-items: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .card {
-
-    box-shadow: 0 .46875rem 2.1875rem rgba(4, 9, 20, .03), 0 .9375rem 1.40625rem rgba(4, 9, 20, .03), 0 .25rem .53125rem rgba(4, 9, 20, .05), 0 .125rem .1875rem rgba(4, 9, 20, .03);
-    border-width: 0;
-    transition: all .2s;
-    margin: 0px 0px 8px;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+  border-width: 0;
+  transition: all 0.2s;
+  margin: 0px 0px 8px;
 }
 .bg-midnight-bloom {
-    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%) !important;
+  background-image: linear-gradient(
+    -20deg,
+    #2b5876 0%,
+    #4e4376 100%
+  ) !important;
 }
 .mt-100 {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 .widget-content .widget-content-left .widget-heading {
-    opacity: .8;
-    font-weight: 700;
+  opacity: 0.8;
+  font-weight: 700;
 }
 .widget-content .widget-content-wrapper {
-    display: flex;
-    flex: 1;
-    position: relative;
-    align-items: center;
+  display: flex;
+  flex: 1;
+  position: relative;
+  align-items: center;
 }
 .widget-content .widget-content-left .widget-subheading {
-    opacity: .5;
+  opacity: 0.5;
 }
 .widget-content .widget-content-right {
-    margin-left: auto;
+  margin-left: auto;
 }
 .widget-content .widget-numbers {
-    font-weight: 700;
-    font-size: 1.8rem;
-    display: block;
+  font-weight: 700;
+  font-size: 1.8rem;
+  display: block;
 }
 .widget-content .widget-numbers {
-    font-weight: 700;
-    font-size: 1.8rem;
-    display: block;
+  font-weight: 700;
+  font-size: 1.8rem;
+  display: block;
 }
 
 .bg-grow-early {
-    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%) !important;
+  background-image: linear-gradient(
+    to top,
+    #0ba360 0%,
+    #3cba92 100%
+  ) !important;
 }
 
 .bg-arielle-smile {
-    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%) !important;
+  background-image: radial-gradient(
+    circle 248px at center,
+    #16d9e3 0%,
+    #30c7ec 47%,
+    #46aef7 100%
+  ) !important;
 }
 
 .widget-content .widget-content-left .widget-subheading {
-    opacity: 5 !important;
+  opacity: 5 !important;
 }
 
 .bg-arielle-smile1 {
-    background-image: radial-gradient(circle 248px at center, #005f6e 0%, #015164 47%, #0d80d1 100%) !important;
+  background-image: radial-gradient(
+    circle 248px at center,
+    #005f6e 0%,
+    #015164 47%,
+    #0d80d1 100%
+  ) !important;
 }
 
-.list-group-item{
-    border-radius: 5px !important;
+.list-group-item {
+  border-radius: 0px !important;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background: #ffffff00;
+  border: 0px;
 }
 .card.mb-3 {
-    margin-bottom: 9px !important;
+  margin-bottom: 9px !important;
 }
+
+/* Styles for when dragging */
+.draggable-item {
+  width: 100%; 
+  min-height: 50px; 
+  border-radius: 10px;
+  padding: 3px;
+  position: relative;
+}
+.draggable-item::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.01; 
+  z-index: -1; 
+}
+
+/* Styles applied when dragging the item */
+
 .draggable-item.dragging {
-    opacity: 0.5; /* Style for when the item is being dragged */
+  position: absolute; 
+  z-index: 10000; 
+  opacity: 0.7; 
+  padding: 15px;
 }
-.draggable-item.dragging .card {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow to the card when dragging */
+
+/* .container-fluid {
+  position: relative;
+} */
+
+
+.draggable-item p {
+  font-size: 14px; 
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  margin-top: 75px;
+  width: 390px; /* Ensure the list group takes full width */
+  overflow-y: auto;
+  /* max-height: calc(100vh - 160px);  */
+}
+
+.lead-header {
+  height: 78px;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  max-width: 391px;
+}
+
+.km {
+  height: calc(100vh - 100px);
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden;
+  width: 100%;
+}
+.ig-border {
+  border: 2px solid rgba(245, 80, 32, 0.5); 
+  background-color: #fff;
+}
+
+.fb-border {
+  border: 2px solid rgba(12, 109, 235, 0.5); /* Facebook border with opacity */
+  background-color: #fff;
+}
+
+.google-border {
+  border: 2px solid rgba(255, 255, 0, 0.5); /* Google border with opacity */
+  background-color: #fff;
+}
+
+.umbrella-of-services-new {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  /* background: url(../images/umbrella-srv2.jpg) center top no-repeat; */
+  background-size: cover;
+  padding: 60px 0;
+  margin: 50px 0 0;
+}
+
+.icon1 {
+  width: 60px;
+  position: absolute;
+  top: 43px;
+  left: 265px;
+  opacity: 0.5;
+}
+
+.icon2 {
+  width: 105px;
+  position: absolute;
+  top: 31px;
+  left: 239px;
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.leads-buttons {
+  display: flex;
+  list-style-type: none;
+  margin-left: 6px;
+}
+
+
+
+
+
+
+
+
+/* Container for columns */
+.leads-container {
+  display: flex;
+  justify-content: space-between;
+  
+  
+}
+
+/* Each column */
+.column {
+   width: 100%;
+  /* background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+ white-space: nowrap;
+   /* margin-left: 5px;  */
+}
+
+.column h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  /* background-color: red; */
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  background: linear-gradient(90deg, rgb(8 4 71) 0%, rgba(9, 9, 121, 1) 35%, rgb(22 132 155) 100%);
+}
+/* Container for leads within the "Leads" column */
+.leads-list {
+  min-height: 70vh;
+  overflow-y: scroll;
+  padding: 10px; /* Optional padding for spacing */
+  /* background-color: #f9f9f9;  */
+  border-radius: 8px; /* Rounded corners for a smoother look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-height: 70vh;
+}
+
+/* Optional scrollbar styling for a more modern look */
+.leads-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.leads-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.leads-list::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+
+/* Card design for each lead */
+.lead-card {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+   padding: 1rem; 
+  /* border-radius: 8px; */
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+
+ .lead-content {
+  position: relative;
+  z-index: 2; /* Ensures the text is on top of the background */
+}
+
+
+.lead-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.background-image {
+  position: absolute;
+    bottom: 0;
+    right: 0;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 166px;
+    height: 100%;
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none; 
+}
+
+
+
+
+/* Content of the lead card */
+.lead-content {
+  flex: 1;
+}
+
+.lead-content p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Icon styling */
+.lead-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0.85;
+  margin-left: -14px;
+}
+
+.self-platform {
+  margin-right: -22px !important;
+}
+
+
+.btn-primary-add-stage{
+  background: white !important;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border: 1px solid #080808;
+}
+.btn-primary-add-stage:hover {
+  background: #080808 !important;
+    color: white !important;   
+    border: 1px solid #080808;
+}
+.btn-primary-add-stage.active, .btn-primary-add-stage:focus{
+  background: #080808 !important; 
+  color: white !important; 
+  border: none !important; 
+  outline: none; 
+  box-shadow: none !important;
 }

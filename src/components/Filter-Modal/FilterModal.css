@@ -1,0 +1,122 @@
+.modalWrapperFilter {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.4s ease;
+}
+
+.modalContainerFilter {
+  display: flex; 
+  align-items: center; 
+  position: relative;
+  transition: transform 0.4s ease; 
+  animation: slideInRight 0.4s; 
+  z-index: inherit;
+  top:73px;
+}
+
+.modalFilter {
+  width: 268px;
+  height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  position: relative;
+}
+
+.drawer {
+  display: flex !important;
+  pointer-events: none;
+}
+
+.drawer .modal-dialog {
+  margin: 0;
+  display: flex;
+  flex: auto;
+  transform: translate(25%, 0);
+}
+
+.drawer .modal-content {
+  border: none;
+  border-radius: 0;
+  overflow: auto;
+}
+
+.drawer.show {
+  pointer-events: auto;
+  transform: translate(0, 0);
+}
+
+.right-align {
+  flex-direction: row-reverse;
+}
+
+.modalWrapperFilter.exiting .modalContainerFilter {
+  animation: slideOutRight 0.4s;
+  opacity: 0;
+}
+
+.btnCloseFilter {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: black;
+  background-color: transparent;
+  margin-right: -110px;
+  cursor: pointer;
+}
+
+@keyframes slideOutRight {
+  0% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.modal-header{
+  /* display: flex;
+  justify-content: space-between;
+  align-items: flex-start; */
+}
+
+.more-filter-items{
+  display: flex;
+    flex-direction: column;
+    padding: 0px 17px;
+    font-size: 14px;
+    color: #616e80;
+    margin-top:35px;
+}
+.select-filter{
+  border: 1px solid #ededed;
+  padding: 0.5rem;
+  font-size: 14px;
+  border-radius: 5px;
+}
+

@@ -1,0 +1,7 @@
+/* src/components/toaster.css */
+.custom-toast {
+    background-color: #444;
+    color: #fff;
+    font-size: 16px;
+  }
+  

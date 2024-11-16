@@ -1,0 +1,14 @@
+#tab-viewrow {
+   margin-top: 72px;
+   background: #f2f4f7;
+   height: 9%;
+   padding-left:28px;
+}
+
+#tab-viewrow h1{
+   font-size: 21px;
+   font-weight: bold;
+   line-height: 1.14;
+   color: #23274a;
+}
+

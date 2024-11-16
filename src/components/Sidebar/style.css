@@ -125,3 +125,23 @@ margin-right: 10px;
     opacity: 1;
     height: auto !important;
 }
+
+.logo{ 
+    text-decoration: none !important;
+  }
+  
+.logo img{
+    width: 30px;
+  }
+  
+  .logo span{
+    color: #1a1a1a;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 15px;
+    
+  }
+
+
+
+ 

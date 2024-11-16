@@ -1,15 +1,18 @@
 .header-background{
-    width: 100%;
+    width: 84.9%;
     height: 70px;
     background: #ffff;
     position: fixed;
     top: 0px;
-    left: 0px;
+    right: 0px;
     z-index: 1000;
+    transition: width 0.3s ease;
   }
   
   
-
+  .header-background.sidebar-active {
+    width: 100%; /* Full width when sidebar is active */
+}
 
 .btn-blue{
     background: #0858f7 !important;
@@ -41,7 +44,7 @@ header button.rounded-circle{
 min-width:40px !important;
 height: 40px !important;
 width: 40px !important;
-
+transition: all 0.2s ease-in-out !important;
 background: #f0f5ff !important;
 }
 
@@ -54,6 +57,7 @@ header button.rounded-circle:hover svg{
 header button.rounded-circle svg{
     color: #292929 !important;
     font-size: 22px !important;
+    transition: all 0.2s ease-in-out !important;
 }
 
 .myAcc{
@@ -184,4 +188,24 @@ header button.rounded-circle svg{
     max-height: 300px;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #161c2d;
+    border-color: #161c2d;
+}
+
+
+@media screen and (max-width:768px){
+    #notification .MuiPaper-elevation {
+        right: 0px !important;
+        width: 300px !important;
+        left: 32px !important;
+        top: 70px !important;
+      }
+      header.header-background {
+        background: #ffff;
+        width: 100%;
+    }
 }

@@ -1,0 +1,233 @@
+.file-div{
+    min-height: 35vh;
+}
+
+
+  .file-drop-area{
+   
+    margin: 6px 5px 16px 19px;
+    display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+   
+  }
+  .wrap-file-drop-area{
+  box-sizing: border-box; 
+  }
+  .file-preview{
+    border: 1px solid #ededed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    min-width: 100%;
+  }
+
+  .dropdown-file{
+    position: relative;
+    
+    width: fit-content;
+  }
+  .dropdown-file button {
+    background: none;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    color: #616e80;
+  }
+
+  .dropdown-file button:hover{
+    color: black;
+    background: none;
+  }
+  .dropdown-menu-file-toggle {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 100px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100000;
+    list-style-type: none !important;
+  }
+
+.dropdown-item-file {
+    /* padding: 8px 12px; */
+    cursor: pointer;
+   
+  }
+  
+
+.btn-design-1{
+  padding-left: 0px;
+  margin-left: 0px;
+}
+  
+
+  .file-svg{
+    margin: 8px 0px 0px 11px;
+    font-size: 51px;
+  }
+
+  .file-name {
+    white-space: nowrap;         
+    overflow: hidden;            
+    text-overflow: ellipsis;     
+    width: 150px;   
+    margin-top: 24px;
+  }
+
+  .dots-svg {
+    /* position: fixed; */
+    
+}
+
+
+
+
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+.d-flex {
+    display: flex !important;
+}
+
+.modal-header .btn-close {
+  z-index: 1070; 
+  position: relative; 
+}
+.custom-modal {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1055; 
+}
+
+.custom-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5); /* Backdrop color */
+  z-index: 1050; /* Ensure it appears below the modal */
+}
+.close-view {
+  border: none;
+  margin-top: -15px;
+  width: fit-content;
+  background: none;
+  font-size: 24px;
+}
+.custom-modal.fade.show {
+  margin-top: -25vh;
+}
+
+
+  
+  .modal-content {
+    
+    width: 850px;
+    margin-left: -306px;
+    margin-top: 229px;
+}
+.file-upload-btn {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.file-input-label {
+  /* display: flex;
+ justify-content: center;
+ align-items: center; */
+  padding: 68px 1px;
+  
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
+ 
+  width: 100%;
+  min-height: 20vh;
+ 
+}
+
+.file-preview-grid {
+  margin-top: 10px; /* Adds spacing between 'Choose Files' text and previews */
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; */
+}
+
+.file-preview-item {
+  text-align: center;
+    margin: 5px;
+    background: #e0e0e0;
+    border-radius: 5px;
+}
+
+.file-input-label input[type="file"] {
+  display: none;
+}
+
+.modal-body{
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 32px;
+}
+
+.btn-primary-upload-file {
+    margin-left: 0px;
+    color: #1d82f5;
+    display: flex;
+    width: fit-content;
+    font-weight: 500;
+    background: none;
+    border: none;
+}
+
+.btn-primary-upload-file:hover{
+  color: black;
+  font-weight: 500;
+}
+
+
+
+.svg-plus-sign{
+  vertical-align: sub;
+  margin-top: -13px;
+  margin-right: 2px;
+}
+
+.modal-footer{
+  /* flex-wrap: none !important; */
+  /* width: 25% !important; */
+  /* justify-content: flex-end !important; */
+}
+
+p.modal-body-title {
+  margin-left: 29px;
+  padding-bottom: -36px;
+  
+  
+}
+
+.require-icon {
+  color: red;
+  
+  
+}
+
+.choose-files{
+  color: black;
+  font-weight: 200;
+  font-size: 13px;
+}
+.btn-danger-remove{
+  background: none;
+  border: none;
+  color:#1d82f5;
+  margin-top: 2px;
+}

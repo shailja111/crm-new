@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import logo from '../../assets/images/logo.png';
+// import { Link } from "react-router-dom";
+// import logo from '../../assets/images/logo.png';
 import './style.css';
 import Button from '@mui/material/Button';
 import { MdMenuOpen } from "react-icons/md";
@@ -42,24 +42,20 @@ const context= useContext(MyContext)
   const handleClosenotificationsDrop=()=>{
     setNotificationDrop(false);
   }
-
+  const handleLogout = () => {
+    context.handleLogout();  // Call the handleLogout function from context
+  };
 
     return (
         <>
-            <header className="d-flex align-items-center header-background">
+             <header className={`d-flex align-items-center header-background ${context.isToggleSidebar ? 'sidebar-active' : ''}`}>
                 <div className="container-fluid w-100">
                     <div className="row d-flex align-items-center w-100">
 
-                        {/* Logo Wrapper */}
-                        <div className="col-12 col-sm-2 d-flex align-items-center part1">
-                            <Link to="/" className="d-flex align-items-center logo">
-                                <img src={logo} alt="logo" />
-                                <span className="ms-2">HOTASH</span>
-                            </Link>
-                        </div>
+                        
 
                         {/* Search & Menu Toggle */}
-                        <div className="col-12 col-sm-4 d-flex align-items-center part2 ps-4">
+                        <div className="col-12 col-sm-6 d-flex align-items-center part2 ps-4">
                             <Button className="rounded-circle mr-3 menu-mobile" onClick={() => context.setIsToggleSidebar(!context.isToggleSidebar)}>
                             {context.isToggleSidebar === false ? <MdMenuOpen /> : <IoMenuOutline />}
                             </Button>
@@ -68,7 +64,7 @@ const context= useContext(MyContext)
 
                         {/* Additional Menu Icons */}
                         <div className="col-12 col-sm-6 d-flex align-items-center justify-content-end part3">
-                            <Button className="rounded-circle mr-3 light-icon">
+                            <Button className="rounded-circle mr-3 light-icon"> 
                                 <MdOutlineLightMode />
                             </Button>
                             
@@ -269,7 +265,7 @@ const context= useContext(MyContext)
                                             </ListItemIcon>
                                             Reset Password
                                             </MenuItem>
-                                            <MenuItem onClick={handleCloseMyAccDrawer}>
+                                            <MenuItem onClick={() => { handleLogout(); handleCloseMyAccDrawer(); }}>
                                             <ListItemIcon>
                                                 <Logout fontSize="small" />
                                             </ListItemIcon>

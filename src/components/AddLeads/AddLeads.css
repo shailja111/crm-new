@@ -1,0 +1,86 @@
+.modalWrapperleads {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(80, 80, 80, 0.7);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 0.4s ease;
+  } 
+  .modalContainerleads {
+    display: flex; 
+    align-items: center; 
+    position: relative;
+    transition: transform 0.4s ease; 
+    animation: slideInRight 0.4s ; 
+    z-index: inherit;
+    
+   
+  }
+
+  
+  .modalleads {
+    position: inherit;
+    width: 85vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .btnCloseleads {
+   
+    position: absolute;
+    top: 9%;
+    left: -3%;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+    background: rgb(33 31 31);
+    border-radius: 18%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding-inline: 31px;
+    text-align: start;
+     
+  }
+  
+  .modalWrapperleads.exiting .modalContainerleads {
+    animation: slideOutRight 0.4s ; 
+    opacity: 0; 
+}
+
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(0); /* Start at its position */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: translateX(100%); /* Move off to the right */
+        opacity: 0; /* Invisible */
+    }
+}
+
+  @keyframes slideInRight {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+        opacity: 0; /* Invisible initially */
+    }
+    100% {
+        transform: translateX(0); /* End in its final position */
+        opacity: 1; /* Fully visible */
+    }
+}
+  
+  
